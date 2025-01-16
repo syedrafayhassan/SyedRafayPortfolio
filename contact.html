@@ -82,15 +82,18 @@
 
         .divs {
             display: flex;
-            align-items: center;
-            padding: 6px 0;
+			padding: 6px 0;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
         }
 
 
         .boxes img {
             width: 46px;
-            margin: 0 6px;
-            border-radius: 15px 15px 0px 0px;
+			margin: 0px 6px;
+			border-radius: 15px 15px 0px 0px;
+			padding: 6px 0;
         }
 
         .input {
@@ -104,10 +107,12 @@
             background: none;
             color: #a6a6d5;
             border: none;
+			cursor: pointer;
         }
 
         .input2 {
-            text-align: left
+            text-align: center;
+			margin-left: 0;
         }
 
 
@@ -128,15 +133,15 @@
             position: absolute;
             z-index: 1;
             width: 120px;
-            bottom: 80%;
-            left: 70%;
+            bottom: 71%;
+			left: 72.7%;
             margin-left: -60px;
             transition: all 1s ease;
         }
 
         .tooltip .tooltiptext2 {
-            bottom: 67%;
-            left: 55%;
+			bottom: 56%;
+			left: 61%;
         }
 
         .tooltip:hover .tooltiptext {
@@ -239,7 +244,7 @@
                 </ul>
             </div>
         </nav>
-        <h1>CONTACT ME</h1>
+        <h1 class="contact">CONTACT ME</h1>
     </header>
 
 

@@ -15,10 +15,16 @@
             padding: 0;
         }
 
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
         body {
             background-color: rgb(0, 0, 33);
             color: white;
             font-family: 'Poppins', sans-serif;
+           
         }
 
         nav {
@@ -96,6 +102,10 @@
 
         }
 
+        .rightSection {
+            text-align: center;
+        }
+
         .rightSection img {
             width: 88%;
         }
@@ -105,13 +115,19 @@
         }
 
         #element {
-            color: rgb(170, 107, 228);
+            color: rgb(255 255 255);
+            display: inline-block;
+            font-weight: 600;
+            /* border-bottom: 2px solid; */
+            /* box-shadow: 0px 2px 4px 1px white; */
+            padding-left: 41px;
         }
 
         .secondSection {
             max-width: 85vw;
             margin: auto;
-            height: 80vh;
+            height: 100vh;
+
         }
 
         .secondSection h1 {
@@ -122,21 +138,59 @@
             color: gray;
         }
 
-        .secondSection .box {
-            background: white;
-            /* width: 80vw; */
-            height: 2px;
-            margin: 56px 0;
+
+
+        /* box */
+        .box {
             display: flex;
-            justify-content: space-evenly;
+            border-top: 3px solid #aa6be4;
+            padding: 0px 12px;
+            position: relative;
+
+        }
+
+        .small-box {
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 0 5px;
+            box-shadow: 2px 2px #aa6be4;
+            position: relative;
+            animation: floating 4s ease-in-out forwards infinite;
         }
 
 
-        .secondSection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            65% {
+                transform: translate(0, 25px);
+            }
+        }
+
+
+        .box-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .b1 {
+            top: 1.8rem;
+        }
+
+        .b2 {
+            top: 11rem;
+        }
+
+        .b3 {
+            top: 17rem;
+        }
+
+        .b4 {
+            top: 25rem;
         }
 
         .image-top {
@@ -146,32 +200,49 @@
             left: -9px;
         }
 
-        .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 171px;
+        .button-33 {
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
             font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
         }
 
-        .vertical-desc {
-            position: relative;
-            top: 80px;
-            color: gray;
-            width: 150px;
-            font-size: 12px;
+        .button-33:hover {
+            box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
         }
 
         footer {
             text-align: center;
             padding: 15px 0;
-            background-color: #101024;
-
+            position: absolute;
+            background-color: #aa6be43b;
+            margin: 0 auto;
+            margin-top: 18rem;
+            text-align: center;
+            width: 100%;
         }
 
 
 
         /* Media Query */
         @media only screen and (max-width: 700px) {
+            body{
+                margin-bottom: 83rem;
+            }
+
             nav {
                 flex-direction: column;
                 justify-content: center;
@@ -208,6 +279,18 @@
                 margin: 100px 0;
                 flex-direction: column;
             }
+
+            .box {
+         flex-wrap: wrap;
+         
+
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
         }
 
         .leftSection {
@@ -223,7 +306,6 @@
 
         .firstSection>div {
             width: 100% !important;
-            text-align: center;
         }
 
         .rightSection img {
@@ -246,23 +328,6 @@
             width: 100%;
         }
 
-        .secondSection .vertical {
-            margin: 0 40px;
-        }
-
-        .vertical-title {
-            width: 85px;
-            top: 70px;
-            left: -15px;
-            font-size: 12px;
-        }
-
-        .vertical-desc {
-            width: 71px;
-            top: 75px;
-            left: -15px;
-            font-size: 9px;
-        }
 
 
 
@@ -315,82 +380,76 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                <span class="purple">My name is Syed Rafay</span>
-                <div>and I am a passionate</div>
-                <span id="element"></span>
-                <div class="buttons">
-                    <a href="Syed Rafay CV.pdf" download="Syed Rafay Hassan CV"><button class="btn">Download
-                            Resume</button></a>
-                    <a href="https://github.com/syedrafayhassan" target="_blank"><button class="btn">Visit
-                            Github</button></a>
-                </div>
+                <h1 id="element"></h1>
             </div>
             <div class="rightSection">
                 <img src="bg.png" alt="">
+                <div class="buttons">
+                    <a href="./temp/Syed Rafay CV.pdf" download="Syed Rafay Hassan CV"><button
+                            class="button-33">Download
+                            Resume</button></a>
+                    <a href="https://github.com/syedrafayhassan" target="_blank"><button class="button-33">Visit
+                            Github</button></a>
+                </div>
             </div>
         </section>
         <hr>
 
         <section class="secondSection">
             <span class="text-gray">What I have done so far</span>
-            <h1>Works Experience</h1>
+            <h1>Works Experiences</h1>
 
-            <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2022)
-                    </div>
-                    <div class="vertical-desc">
-                        The HyperText Markup Language or HTML is the standard markup language for documents designed to
-                        be displayed in a web browser. It defines the content and structure of web content.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="css.png" alt="">
-                    <div class="vertical-title">
-                        CSS Developer&nbsp; (2022)
-                    </div>
-                    <div class="vertical-desc">
-                        Cascading Style Sheets is a style sheet language used for specifying the presentation and
-                        styling of a document written in a markup language such as HTML or XML.
-                    </div>
-                </div>
-                <div class="vertical right">
-                    <img class="image-top" src="JavaScript.png" alt="">
-                    <div class="vertical-title">
-                        JavaScript Developer (2023)
-                    </div>
-                    <div class="vertical-desc">
-                        JavaScript, often abbreviated as JS, is a programming language and core technology of the World
-                        Wide Web, alongside HTML and CSS. websites use JavaScript on the client side for webpage
-                        behavior.
-                    </div>
-                </div>
-                <div class="vertical right">
-                    <img class="image-top" src="react.png" alt="">
-                    <div class="vertical-title">
-                        React.js Developer (2023)
-                    </div>
-                    <div class="vertical-desc">
-                        React is a free and open-source front-end JavaScript library for building user interfaces based
-                        on components. React can be used to develop single-page, mobile, or server-rendered
-                        applications.
-                    </div>
-                </div>
+            <div class="container">
+                <div class="box">
 
+                    <div class='small-box b1'>
+                        <img class="box-img" src="html.png" alt="">
+                        <h1>HTML Developer (2022)</h1>
+                        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed
+                            to
+                            be displayed in a web browser. It defines the content and structure of web content.</p>
+                    </div>
+                    <div class='small-box b2'>
+                        <img class="box-img" src="css.png" alt="">
+                        <h1>CSS Developer&nbsp; (2022)</h1>
+                        <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and
+                            styling of a document written in a markup language such as HTML or XML.</p>
+                    </div>
+                    <div class='small-box b3'>
+                        <img class="box-img" src="JavaScript.png" alt="">
+                        <h1>JavaScript Developer (2023)</h1>
+                        <p>JavaScript, often abbreviated as JS, is a programming language and core technology of the
+                            World
+                            Wide Web, alongside HTML and CSS. websites use JavaScript on the client side for webpage
+                            behavior.</p>
+                    </div>
+                    <div class='small-box b4'>
+                        <img class="box-img" src="react.png" alt="">
+                        <h1>React.JS (2023)</h1>
+                        <p>React is a free and open-source front-end JavaScript library for building user interfaces
+                            based
+                            on components. React can be used to develop single-page, mobile, or server-rendered
+                            applications.</p>
+                    </div>
+                </div>
             </div>
 
         </section>
     </main>
 
-    <footer>Copyright © Syed Rafay Hassan | All rights reserved</footer>
+    <footer>
+        Copyright © Syed Rafay Hassan | All rights reserved
+    </footer>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer'],
-            typeSpeed: 50,
+            strings: ['My name is Syed Rafay and I am a passionate', 'Web Developer'],
+            typeSpeed: 30,
+            backSpeed: 0,
+            backDelay: 500,
+            smartBackspace: true, // this is a default
+            loop: true
         });
     </script>
 

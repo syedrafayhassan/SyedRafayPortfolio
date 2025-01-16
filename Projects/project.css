@@ -4,7 +4,11 @@
     padding: 0;
 
 }
-.mySlides {display: none}
+.mySlides {
+  display: none;
+  width: 99vw;
+  display: flex;
+}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -14,13 +18,14 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   overflow: hidden;
+  margin-top: 10px;
   }
 
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 28%;
+    top: 44%;
     width: auto;
     padding: 16px;
     margin-top: -22px;
@@ -70,6 +75,7 @@ img {vertical-align: middle;}
   
   .active, .dot:hover {
     background-color: #717171;
+    margin-top: 19px;
   }
   
   /* Fading animation */
@@ -80,7 +86,7 @@ img {vertical-align: middle;}
 
   .mySlides img{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     cursor: pointer;
   }
   
@@ -92,6 +98,16 @@ img {vertical-align: middle;}
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+  }
+  
+  @media only screen and (max-width: 700px) {
+	.prev, .next {
+	 top: 16%;
+	}
+  .mySlides {
+    flex-direction: column;
+  }
+
   }
 
   
